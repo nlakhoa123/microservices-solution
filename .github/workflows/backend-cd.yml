@@ -17,6 +17,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Debug - List files
+        run: ls -la && ls -la UserService/
+
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -26,10 +29,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and Push Docker Image
+      - name: Build and Push UserService
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./UserService
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/aspnet-backend:${{ github.sha }}
