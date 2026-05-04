@@ -35,7 +35,7 @@
 
       <!-- Architecture note -->
       <div class="card" style="margin-top:2rem; background:#f8fafc;">
-        <h3 style="margin-bottom:1rem;">🏗️ Architecture</h3>
+        <h3 style="margin-bottom:1rem;"> Architecture</h3>
         <div class="grid-4" style="gap:1rem;">
           <div v-for="svc in services" :key="svc.name" style="display:flex; align-items:center; gap:.5rem; padding:.7rem; background:#fff; border-radius:8px; border:1px solid var(--border);">
             <span style="font-size:1.3rem;">{{ svc.icon }}</span>
