@@ -2,69 +2,69 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/auth/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "userservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microservices-solution.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/api/auth/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
       "DownstreamPathTemplate": "/api/url/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "urlshortenerservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microshop-url.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/api/url/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
       "DownstreamPathTemplate": "/r/{code}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "urlshortenerservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microshop-url.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/r/{code}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
       "DownstreamPathTemplate": "/api/products/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "goodsservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microshop-goods.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/api/products/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
       "DownstreamPathTemplate": "/api/products",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "goodsservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microshop-goods.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/api/products",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
       "DownstreamPathTemplate": "/api/discounts/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "goodsservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microshop-goods.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/api/discounts/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
       "DownstreamPathTemplate": "/api/orders/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "goodsservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microshop-goods.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/api/orders/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
       "DownstreamPathTemplate": "/api/orders",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "goodsservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microshop-goods.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/api/orders",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
       "DownstreamPathTemplate": "/api/contact/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [{ "Host": "messagebrokerservice", "Port": 8080 }],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{ "Host": "microshop-message.onrender.com", "Port": 443 }],
       "UpstreamPathTemplate": "/api/contact/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000"
+    "BaseUrl": "https://microshop-gateway-cc83.onrender.com"
   }
 }
