@@ -16,11 +16,10 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
-  // Set on load
   setAxiosAuth()
 
   async function login(email, password) {
-    const { data } = await axios.post('/api/auth/login', { email, password })
+    const { data } = await axios.post('/api/Auth/login', { email, password })
     token.value = data.token
     user.value = { id: data.userId, username: data.username, email: data.email, role: data.role }
     localStorage.setItem('token', data.token)
@@ -30,7 +29,7 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   async function register(username, email, password) {
-    const { data } = await axios.post('/api/auth/register', { username, email, password })
+    const { data } = await axios.post('/api/Auth/register', { username, email, password })
     token.value = data.token
     user.value = { id: data.userId, username: data.username, email: data.email, role: data.role }
     localStorage.setItem('token', data.token)
