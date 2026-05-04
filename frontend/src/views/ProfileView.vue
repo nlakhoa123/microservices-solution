@@ -55,7 +55,7 @@ async function save() {
   saved.value = false
   error.value = ''
   try {
-    const { data } = await axios.put('/api/auth/profile', form.value)
+    const { data } = await axios.put('/api/Auth/profile', form.value)
     auth.user.username = data.username
     auth.user.email = data.email
     localStorage.setItem('user', JSON.stringify(auth.user))
