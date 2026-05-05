@@ -32,8 +32,8 @@ jobs:
       - name: Build and push Goods Service
         uses: docker/build-push-action@v7
         with:
-          context: .
-          file: GoodsService/Dockerfile
+          context: ./GoodsService
+          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/goods-service:latest
@@ -42,8 +42,8 @@ jobs:
       - name: Build and push User Service
         uses: docker/build-push-action@v7
         with:
-          context: .
-          file: UserService/Dockerfile
+          context: ./UserService
+          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/user-service:latest
@@ -52,8 +52,8 @@ jobs:
       - name: Build and push Message Broker Service
         uses: docker/build-push-action@v7
         with:
-          context: .
-          file: MessageBrokerService/Dockerfile
+          context: ./MessageBrokerService
+          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/message-broker-service:latest
@@ -62,8 +62,8 @@ jobs:
       - name: Build and push UrlShortener Service
         uses: docker/build-push-action@v7
         with:
-          context: .
-          file: UrlShortenerService/Dockerfile
+          context: ./UrlShortenerService
+          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/urlshortener-service:latest
@@ -72,8 +72,8 @@ jobs:
       - name: Build and push Api Gateway
         uses: docker/build-push-action@v7
         with:
-          context: .
-          file: ApiGateway/Dockerfile
+          context: ./ApiGateway
+          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/api-gateway:latest
