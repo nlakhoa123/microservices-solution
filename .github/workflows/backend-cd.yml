@@ -69,15 +69,15 @@ jobs:
             iubedauphepthuat/urlshortener-service:latest
             iubedauphepthuat/urlshortener-service:${{ github.sha }}
 
-      - name: Build and push Api Gateway Service
+      - name: Build and push Api Gateway
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: ApiGatewayService/Dockerfile
+          file: ApiGateway/Dockerfile
           push: true
           tags: |
-            iubedauphepthuat/api-gateway-service:latest
-            iubedauphepthuat/api-gateway-service:${{ github.sha }}
+            iubedauphepthuat/api-gateway:latest
+            iubedauphepthuat/api-gateway:${{ github.sha }}
 
 
       - name: Trigger Production Deploy
