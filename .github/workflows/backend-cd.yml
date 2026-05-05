@@ -25,17 +25,60 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v5
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+      
+      - name: Build and push Goods Service
+        uses: docker/build-push-action@v7
         with:
           context: .
+          file: GoodsService/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/aspnet-backend:${{ github.sha }}
-            ${{ secrets.DOCKER_USERNAME }}/aspnet-backend:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+            yourdockerhub/goods-service:latest
+            yourdockerhub/goods-service:${{ github.sha }}
+
+      - name: Build and push User Service
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: UserService/Dockerfile
+          push: true
+          tags: |
+            yourdockerhub/user-service:latest
+            yourdockerhub/user-service:${{ github.sha }}
+
+      - name: Build and push Message Service
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: MessageService/Dockerfile
+          push: true
+          tags: |
+            yourdockerhub/message-service:latest
+            yourdockerhub/message-service:${{ github.sha }}
+
+      - name: Build and push UrlShortener Service
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: UrlShortenerService/Dockerfile
+          push: true
+          tags: |
+            yourdockerhub/urlshortener-service:latest
+            yourdockerhub/urlshortener-service:${{ github.sha }}
+
+      - name: Build and push Api Gateway Service
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: ApiGatewayService/Dockerfile
+          push: true
+          tags: |
+            yourdockerhub/api-gateway-service:latest
+            yourdockerhub/api-gateway-service:${{ github.sha }}
+
 
       - name: Trigger Production Deploy
         run: curl -X GET ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
