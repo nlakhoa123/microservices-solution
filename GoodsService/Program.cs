@@ -36,6 +36,7 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<GoodsDbContext>();
     db.Database.EnsureCreated();
+    db.Database.Migrate();
 }
 
 app.UseSwagger();
