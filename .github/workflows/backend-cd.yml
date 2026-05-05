@@ -49,15 +49,15 @@ jobs:
             iubedauphepthuat/user-service:latest
             iubedauphepthuat/user-service:${{ github.sha }}
 
-      - name: Build and push Message Service
+      - name: Build and push Message Broker Service
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: MessageService/Dockerfile
+          file: MessageBrokerService/Dockerfile
           push: true
           tags: |
-            iubedauphepthuat/message-service:latest
-            iubedauphepthuat/message-service:${{ github.sha }}
+            iubedauphepthuat/message-broker-service:latest
+            iubedauphepthuat/message-broker-service:${{ github.sha }}
 
       - name: Build and push UrlShortener Service
         uses: docker/build-push-action@v7
