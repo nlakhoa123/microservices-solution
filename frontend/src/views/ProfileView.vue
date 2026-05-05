@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="container" style="max-width:540px;">
-      <h1 class="section-title">My Profile</h1>
+      <h1 class="section-title">👤 My Profile</h1>
 
       <div class="card">
         <div v-if="saved" class="alert alert-success">Profile updated!</div>
@@ -55,7 +55,7 @@ async function save() {
   saved.value = false
   error.value = ''
   try {
-    const { data } = await axios.put('/api/Auth/profile', form.value)
+    const { data } = await axios.put('/api/auth/profile', form.value)
     auth.user.username = data.username
     auth.user.email = data.email
     localStorage.setItem('user', JSON.stringify(auth.user))

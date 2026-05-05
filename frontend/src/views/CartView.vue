@@ -1,9 +1,10 @@
 <template>
   <div class="page">
     <div class="container">
-      <h1 class="section-title">Your Cart</h1>
+      <h1 class="section-title">🛒 Your Cart</h1>
 
       <div v-if="cart.items.length === 0" class="card" style="text-align:center; padding:4rem;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🛒</div>
         <p style="color:var(--text-muted);">Your cart is empty.</p>
         <router-link to="/shop" class="btn btn-primary" style="margin-top:1rem;">Browse Shop</router-link>
       </div>
@@ -140,7 +141,7 @@ async function placeOrder() {
     cart.clear()
     discountApplied.value = false
     discountCode.value = ''
-    window.showToast('Order placed successfully!')
+    window.showToast('Order placed successfully! 🎉')
   } catch (e) {
     orderError.value = e.response?.data?.message || 'Failed to place order.'
   } finally {

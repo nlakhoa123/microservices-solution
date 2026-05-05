@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="container" style="max-width:720px;">
-      <h1 class="section-title">URL Shortener</h1>
+      <h1 class="section-title">🔗 URL Shortener</h1>
       <p class="section-subtitle">Powered by Redis cache for instant redirects</p>
 
       <!-- Shorten form -->
@@ -17,7 +17,7 @@
             <input class="form-control" type="number" v-model="expiresIn" placeholder="Leave blank for no expiry" min="1" />
           </div>
           <button class="btn btn-primary" @click="shorten" :disabled="loading || !longUrl">
-            {{ loading ? 'Shortening...' : 'Shorten' }}
+            {{ loading ? 'Shortening...' : '⚡ Shorten' }}
           </button>
         </div>
 
@@ -27,7 +27,7 @@
             <div style="font-size:.8rem; font-weight:600; margin-bottom:.2rem;">Short URL:</div>
             <a :href="result.shortUrl" target="_blank" style="font-weight:800; color:#065f46;">{{ result.shortUrl }}</a>
           </div>
-          <button class="btn btn-success btn-sm" @click="copy(result.shortUrl)">Copy</button>
+          <button class="btn btn-success btn-sm" @click="copy(result.shortUrl)">📋 Copy</button>
         </div>
 
         <div v-if="error" class="alert alert-error" style="margin-top:1rem;">{{ error }}</div>
