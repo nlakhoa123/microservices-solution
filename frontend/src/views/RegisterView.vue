@@ -1,7 +1,7 @@
 <template>
   <div class="page" style="display:flex; align-items:center; justify-content:center;">
     <div class="card" style="width:100%; max-width:420px;">
-      <h2 style="margin-bottom:.3rem;">Create Account 🎉</h2>
+      <h2 style="margin-bottom:.3rem;">Create Account</h2>
       <p style="color:var(--text-muted); margin-bottom:1.5rem; font-size:.9rem;">Join MicroShop today</p>
 
       <div v-if="error" class="alert alert-error">{{ error }}</div>

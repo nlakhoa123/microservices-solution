@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="container" style="max-width:540px;">
-      <h1 class="section-title">👤 My Profile</h1>
+      <h1 class="section-title">My Profile</h1>
 
       <div class="card">
         <div v-if="saved" class="alert alert-success">Profile updated!</div>

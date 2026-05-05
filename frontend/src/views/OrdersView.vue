@@ -1,11 +1,10 @@
 <template>
   <div class="page">
     <div class="container">
-      <h1 class="section-title">📦 My Orders</h1>
+      <h1 class="section-title">My Orders</h1>
 
       <div v-if="loading" class="spinner"></div>
       <div v-else-if="orders.length === 0" class="card" style="text-align:center; padding:3rem;">
-        <div style="font-size:3rem; margin-bottom:1rem;">📦</div>
         <p style="color:var(--text-muted);">No orders yet.</p>
         <router-link to="/shop" class="btn btn-primary" style="margin-top:1rem;">Start Shopping</router-link>
       </div>
