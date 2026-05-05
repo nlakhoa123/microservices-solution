@@ -33,7 +33,6 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: ./GoodsService
-          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/goods-service:latest
@@ -43,7 +42,6 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: ./UserService
-          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/user-service:latest
@@ -53,7 +51,6 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: ./MessageBrokerService
-          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/message-broker-service:latest
@@ -63,7 +60,6 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: ./UrlShortenerService
-          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/urlshortener-service:latest
@@ -73,12 +69,11 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: ./ApiGateway
-          file: Dockerfile
           push: true
           tags: |
             iubedauphepthuat/api-gateway:latest
             iubedauphepthuat/api-gateway:${{ github.sha }}
-
+      
 
       - name: Trigger Production Deploy
         run: curl -X GET ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
