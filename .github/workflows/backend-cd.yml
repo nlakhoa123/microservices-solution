@@ -36,8 +36,8 @@ jobs:
           file: GoodsService/Dockerfile
           push: true
           tags: |
-            yourdockerhub/goods-service:latest
-            yourdockerhub/goods-service:${{ github.sha }}
+            iubedauphepthuat/goods-service:latest
+            iubedauphepthuat/goods-service:${{ github.sha }}
 
       - name: Build and push User Service
         uses: docker/build-push-action@v7
@@ -46,8 +46,8 @@ jobs:
           file: UserService/Dockerfile
           push: true
           tags: |
-            yourdockerhub/user-service:latest
-            yourdockerhub/user-service:${{ github.sha }}
+            iubedauphepthuat/user-service:latest
+            iubedauphepthuat/user-service:${{ github.sha }}
 
       - name: Build and push Message Service
         uses: docker/build-push-action@v7
@@ -56,8 +56,8 @@ jobs:
           file: MessageService/Dockerfile
           push: true
           tags: |
-            yourdockerhub/message-service:latest
-            yourdockerhub/message-service:${{ github.sha }}
+            iubedauphepthuat/message-service:latest
+            iubedauphepthuat/message-service:${{ github.sha }}
 
       - name: Build and push UrlShortener Service
         uses: docker/build-push-action@v7
@@ -66,8 +66,8 @@ jobs:
           file: UrlShortenerService/Dockerfile
           push: true
           tags: |
-            yourdockerhub/urlshortener-service:latest
-            yourdockerhub/urlshortener-service:${{ github.sha }}
+            iubedauphepthuat/urlshortener-service:latest
+            iubedauphepthuat/urlshortener-service:${{ github.sha }}
 
       - name: Build and push Api Gateway Service
         uses: docker/build-push-action@v7
@@ -76,8 +76,8 @@ jobs:
           file: ApiGatewayService/Dockerfile
           push: true
           tags: |
-            yourdockerhub/api-gateway-service:latest
-            yourdockerhub/api-gateway-service:${{ github.sha }}
+            iubedauphepthuat/api-gateway-service:latest
+            iubedauphepthuat/api-gateway-service:${{ github.sha }}
 
 
       - name: Trigger Production Deploy
