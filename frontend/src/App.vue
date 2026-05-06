@@ -2,12 +2,11 @@
   <div>
     <nav class="navbar">
       <div class="container navbar-inner">
-        <router-link to="/" class="navbar-brand">🛍️ MicroShop</router-link>
+        <router-link to="/" class="navbar-brand">MicroShop</router-link>
         <router-link to="/shop" class="nav-link" active-class="active">Shop</router-link>
         <router-link to="/url-shortener" class="nav-link" active-class="active">URL Shortener</router-link>
         <router-link to="/contact" class="nav-link" active-class="active">Contact</router-link>
-        <router-link to="/cart" class="nav-link" active-class="active">
-          🛒 Cart <span v-if="cart.count" class="badge badge-blue">{{ cart.count }}</span>
+        <router-link to="/cart" class="nav-link" active-class="active">Cart <span v-if="cart.count" class="badge badge-blue">{{ cart.count }}</span>
         </router-link>
         <template v-if="auth.isLoggedIn">
           <router-link to="/orders" class="nav-link" active-class="active">Orders</router-link>

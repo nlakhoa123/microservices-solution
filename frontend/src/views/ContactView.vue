@@ -1,12 +1,11 @@
 <template>
   <div class="page">
     <div class="container" style="max-width:640px;">
-      <h1 class="section-title">💬 Contact Us</h1>
+      <h1 class="section-title">Contact Us</h1>
       <p class="section-subtitle">Messages are queued via RabbitMQ and processed reliably</p>
 
       <div class="card" style="margin-bottom:1.5rem;">
-        <div v-if="success" class="alert alert-success">
-          ✅ Message sent! Status: <strong>{{ success }}</strong>. We'll get back to you soon.
+        <div v-if="success" class="alert alert-success">Message sent! Status: <strong>{{ success }}</strong>. We'll get back to you soon.
         </div>
         <div v-if="error" class="alert alert-error">{{ error }}</div>
 
@@ -30,13 +29,12 @@
         </div>
 
         <button class="btn btn-primary" style="width:100%;" :disabled="loading" @click="send">
-          {{ loading ? 'Sending...' : '📨 Send Message' }}
+          {{ loading ? 'Sending...' : 'Send Message' }}
         </button>
       </div>
 
       <!-- Info box -->
       <div class="card" style="background:#f8fafc; display:flex; gap:1rem; align-items:flex-start;">
-        <div style="font-size:1.5rem;">🐰</div>
         <div>
           <div style="font-weight:700; margin-bottom:.3rem;">Powered by RabbitMQ</div>
           <p style="font-size:.85rem; color:var(--text-muted);">Your message is published to a RabbitMQ queue and consumed by a background worker. This guarantees reliable delivery even during high load.</p>

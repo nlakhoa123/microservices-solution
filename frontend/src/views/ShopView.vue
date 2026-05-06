@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="container">
-      <h1 class="section-title">🛒 Shop</h1>
+      <h1 class="section-title">Shop</h1>
       <p class="section-subtitle">Browse our products and add them to your cart</p>
 
       <!-- Loading -->
