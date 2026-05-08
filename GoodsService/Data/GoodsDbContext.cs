@@ -24,10 +24,10 @@ public class GoodsDbContext : DbContext
 
         // Seed data
         modelBuilder.Entity<Product>().HasData(
-            new Product { Id = 1, Name = "Laptop Pro", Description = "High-performance laptop", Price = 1299.99m, Stock = 50, Category = "Electronics", ImageUrl = "https://via.placeholder.com/200" },
-            new Product { Id = 2, Name = "Wireless Mouse", Description = "Ergonomic wireless mouse", Price = 29.99m, Stock = 200, Category = "Accessories", ImageUrl = "https://via.placeholder.com/200" },
-            new Product { Id = 3, Name = "USB-C Hub", Description = "7-in-1 USB-C hub", Price = 49.99m, Stock = 100, Category = "Accessories", ImageUrl = "https://via.placeholder.com/200" },
-            new Product { Id = 4, Name = "Monitor 27\"", Description = "4K IPS display", Price = 399.99m, Stock = 30, Category = "Electronics", ImageUrl = "https://via.placeholder.com/200" }
+            new Product { Id = 1, Name = "1 Month", Description = "Unlock more limit for your link", Price = 15, Stock = 1000, Category = "Package", ImageUrl = "https://via.placeholder.com/200" },
+            new Product { Id = 2, Name = "2 Months", Description = "If 1 month not enough, you can try 2 months", Price = 29, Stock = 200, Category = "Package", ImageUrl = "https://via.placeholder.com/200" },
+            new Product { Id = 3, Name = "3 Months", Description = "Oh, 2 months isn't enough?", Price = 100, Stock = 100, Category = "Package", ImageUrl = "https://via.placeholder.com/200" },
+            new Product { Id = 4, Name = "1 Year", Description = "Here's a year of unlimited access", Price = 150, Stock = 30, Category = "Package", ImageUrl = "https://via.placeholder.com/200" }
         );
     }
 }
